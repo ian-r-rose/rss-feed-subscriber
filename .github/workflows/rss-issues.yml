@@ -1,0 +1,19 @@
+name: rss-issues
+
+on:
+  schedule:
+    - cron: "50 * * * *"
+
+jobs:
+  gke-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: guilhem/rss-issues-action@0.2.0
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          feed: https://meta.discourse.org/latest.rss 
+          prefix: "[Discourse]"
+          characterLimit: 255
+          dry-run: true
+          lastTime: 24h
+          labels: invalid,question
