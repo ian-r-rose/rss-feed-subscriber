@@ -13,5 +13,5 @@ jobs:
           prefix: "[Discourse]"
           characterLimit: 255
           dry-run: false
-          lastTime: 24h
+          lastTime: 12h
           labels: invalid,question
