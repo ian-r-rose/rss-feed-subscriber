@@ -1,8 +1,6 @@
 name: rss-issues
 
-on:
-  schedule:
-    - cron: "50 * * * *"
+on: push
 
 jobs:
   gke-release:
